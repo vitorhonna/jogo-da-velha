@@ -1,0 +1,100 @@
+:root {
+    --gap: 10px;
+    --square: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+    user-select: none;
+}
+
+body {
+    background-color: hsl(240, 100%, 5%);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+h1 {
+    padding: 30px;
+    color: white;
+}
+
+div.stage {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--gap);
+}
+
+div.row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+}
+
+div.square {
+    background-color: hsl(220, 100%, 75%);
+    width: var(--square);
+    height: var(--square);
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+}
+
+div.square:hover {
+    background-color: hsl(222, 100%, 80%);
+}
+
+.player1::after {
+    content: "\1F431"; /* \1F431 = Cat Emoji 🐱 */
+}
+
+.player2::after {
+    content: "\1F436"; /* \1F436 = Dog Emoji 🐶 */
+}
+
+.winner {
+    display: none;
+
+    background-color: hsl(222, 100%, 94%);
+    color: darkblue;
+
+    border-radius: 0.25rem;
+
+    margin-top: 20px;
+    padding: 10px 20px 13px 20px;
+    font-size: 2rem;
+}
+
+#restartButton {
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 5px 10px;
+    color: white;
+    background-color: crimson;
+    border: none;
+    border-radius: 00.25rem;
+
+    font-size: 1rem;
+}
+
+@media (max-width: 400px) {
+    :root {
+        --gap: 10px;
+        --square: 85px;
+    }
+}
