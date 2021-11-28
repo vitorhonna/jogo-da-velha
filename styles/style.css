@@ -19,6 +19,14 @@ body {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 
     align-items: center;
 }
@@ -90,6 +98,19 @@ div.square:hover {
     border-radius: 00.25rem;
 
     font-size: 1rem;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: gray;
+    font-size: 0.8rem;
 }
 
 @media (max-width: 400px) {
